@@ -44,7 +44,7 @@ public class UtenteService {
     }
 
     public List<Utente> trovaUtenteAttivo(boolean disponibile) {
-        return utenteRepository.isActive(String.valueOf(disponibile=true));
+        return utenteRepository.isActive(Boolean.parseBoolean(String.valueOf(disponibile=true)));
     }
 
     //creare un nuovo utente

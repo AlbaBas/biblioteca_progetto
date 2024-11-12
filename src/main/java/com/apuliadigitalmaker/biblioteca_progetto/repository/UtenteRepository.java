@@ -21,7 +21,7 @@ public interface UtenteRepository extends JpaRepository<Utente, Long> {
     List<Utente> findByRuolo(String ruolo);
 
     // Cerca utenti attivi
-    List<Utente> isActive(String s);
+    List<Utente> isActive(boolean isActive);
 
     // Trova un utente per email
     List<Utente> findByEmail(String email);
