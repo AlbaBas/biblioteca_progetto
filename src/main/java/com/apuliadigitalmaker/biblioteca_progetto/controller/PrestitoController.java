@@ -1,6 +1,5 @@
 package com.apuliadigitalmaker.biblioteca_progetto.controller;
 
-import com.apuliadigitalmaker.biblioteca_progetto.model.Prestito;
 import com.apuliadigitalmaker.biblioteca_progetto.service.PrestitoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

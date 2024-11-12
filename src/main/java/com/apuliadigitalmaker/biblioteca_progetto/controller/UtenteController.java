@@ -1,6 +1,5 @@
 package com.apuliadigitalmaker.biblioteca_progetto.controller;
 
-import com.apuliadigitalmaker.biblioteca_progetto.model.Utente;
 import com.apuliadigitalmaker.biblioteca_progetto.service.UtenteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

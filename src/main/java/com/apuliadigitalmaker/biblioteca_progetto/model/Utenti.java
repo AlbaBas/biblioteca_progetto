@@ -9,8 +9,8 @@ import java.time.Instant;
 @Getter
 @Setter
 @Entity
-@Table(name = "autore", schema = "bliblioteca_progetto")
-public class Autore {
+@Table(name = "utenti", schema = "bliblioteca_progetto")
+public class Utenti {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -22,17 +22,26 @@ public class Autore {
     @Column(name = "cognome", nullable = false)
     private String cognome;
 
-    @Column(name = "annoNascita", nullable = false)
-    private Instant annoNascita;
+    @Column(name = "email", nullable = false)
+    private String email;
 
-    @Column(name = "`nazionalità`", nullable = false)
-    private String nazionalità;
+    @Column(name = "ruolo", nullable = false)
+    private String ruolo;
 
-    @Column(name = "luogoNascita", nullable = false)
-    private String luogoNascita;
+    @Column(name = "attivo")
+    private Byte attivo;
 
-    @Column(name = "morto")
-    private Byte morto;
+    @Column(name = "ultimaVisita", nullable = false)
+    private Instant ultimaVisita;
+
+    @Column(name = "indirizzo", nullable = false)
+    private String indirizzo;
+
+    @Column(name = "telefono", nullable = false)
+    private Integer telefono;
+
+    @Column(name = "dataIscrizione", nullable = false)
+    private Instant dataIscrizione;
 
     @Column(name = "created", nullable = false)
     private Instant created;
@@ -42,5 +51,8 @@ public class Autore {
 
     @Column(name = "deleted", nullable = false)
     private Instant deleted;
+
+    @Column(name = "is_active")
+    private Boolean isActive;
 
 }

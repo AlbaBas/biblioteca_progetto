@@ -1,6 +1,5 @@
 package com.apuliadigitalmaker.biblioteca_progetto.service;
 
-import com.apuliadigitalmaker.biblioteca_progetto.model.Autore;
 import com.apuliadigitalmaker.biblioteca_progetto.repository.AutoreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

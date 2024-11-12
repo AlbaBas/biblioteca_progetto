@@ -1,50 +1,59 @@
 package com.apuliadigitalmaker.biblioteca_progetto.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import lombok.Data;
-import org.hibernate.annotations.ColumnDefault;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.time.Instant;
 
+@Getter
+@Setter
 @Entity
-@Table(name = "libri")
-@Data
+@Table(name = "libro", schema = "bliblioteca_progetto")
 public class Libro {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
-    private Long id;
+    private Integer id;
 
-    @Column(name ="titolo", nullable = false)
+    @Column(name = "autore_id")
+    private Integer autoreId;
+
+    @Column(name = "titolo", nullable = false)
     private String titolo;
 
-    @ManyToOne
-    @JoinColumn(name = "autore_id", nullable = false)
-    private Autore autore;
+    @Column(name = "annoPubblicazione", nullable = false)
+    private Integer annoPubblicazione;
 
     @Column(name = "genere", nullable = false)
     private String genere;
 
-    @Column(name = "annoPubblicazione", nullable = false)
-    private int annoPubblicazione;
+    @Column(name = "disponibili")
+    private Byte disponibili;
 
-    @Column(name = "disponibile")
-    private boolean disponibile;
+    @Column(name = "editore", nullable = false)
+    private String editore;
 
-    @JsonIgnore
-    @ColumnDefault("current_timestamp()")
-    @Column(name = "created", updatable = false)
+    @Column(name = "lingua", nullable = false)
+    private String lingua;
+
+    @Column(name = "nrPagine", nullable = false)
+    private Integer nrPagine;
+
+    @Lob
+    @Column(name = "descrizione")
+    private String descrizione;
+
+    @Column(name = "prezzo")
+    private Integer prezzo;
+
+    @Column(name = "created", nullable = false)
     private Instant created;
 
-    @JsonIgnore
-    @ColumnDefault("current_timestamp()")
-    @Column(name = "updated")
+    @Column(name = "updated", nullable = false)
     private Instant updated;
 
-    @JsonIgnore
-    @Column(name = "deleted")
+    @Column(name = "deleted", nullable = false)
     private Instant deleted;
 
 }

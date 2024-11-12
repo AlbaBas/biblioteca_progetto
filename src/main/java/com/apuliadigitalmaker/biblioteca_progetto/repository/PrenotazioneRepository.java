@@ -1,6 +1,5 @@
 package com.apuliadigitalmaker.biblioteca_progetto.repository;
 
-import com.apuliadigitalmaker.biblioteca_progetto.model.Prenotazione;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

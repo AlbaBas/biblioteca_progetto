@@ -78,7 +78,7 @@ public class AutoreController {
     @PutMapping("/{id}")
     public ResponseEntity<Autore> aggiornaAutore(@PathVariable Long id, @RequestBody Autore autore) {
         autore.setId(id); // Imposta l'ID dell'autore per l'aggiornamento
-        Autore autoreAggiornato = autoreService.aggiornaAutore(autore);
+        Autore autoreAggiornato = autoreService.aggiornaAutore(Autore);
         return ResponseEntity.ok(autoreAggiornato);
     }
 
@@ -87,7 +87,7 @@ public class AutoreController {
     public ResponseEntity<Void> eliminaAutore(@PathVariable Long id) {
         Optional<Autore> autore = autoreService.trovaAutorePerId(id);
         if (autore.isPresent()) {
-            autoreService.eliminaAutore(autore.get());
+            autoreService.eliminaAutore(Autore.get());
             return ResponseEntity.noContent().build();
         } else {
             return ResponseEntity.notFound().build();

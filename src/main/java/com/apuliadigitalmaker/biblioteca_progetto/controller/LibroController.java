@@ -1,13 +1,11 @@
 package com.apuliadigitalmaker.biblioteca_progetto.controller;
 
-import com.apuliadigitalmaker.biblioteca_progetto.model.Libro;
 import com.apuliadigitalmaker.biblioteca_progetto.service.LibroService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/libri")
